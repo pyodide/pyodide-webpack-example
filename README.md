@@ -12,5 +12,6 @@ This project is an minimal working example of Pyodide and Webpack.
 ## How to run 
 
 - Execute `npm install` to install Pyodide JS package. 
+    - To fix npm pyodide 0.18.2 issue, you need to copy a fixed version of [load-pyodide.js](https://github.com/grimmer0125/pyodide/blob/fix_webpack_compatibility_issue/src/js/load-pyodide.js) to `node_moduels/pyodide/load-pyodide.js`, before a new version of Pyodide npm package is release.
 - Execute `npx webpack` to generated `dist/main.js` from `src/index.js`. There is no webpack config file needed. 
 
