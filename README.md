@@ -1,6 +1,6 @@
 # Pyodide Webpack Example
 
-This project is an minimal working example of Pyodide and Webpack. 
+This project is a minimal working example of Pyodide and Webpack. 
 - Pyodide JavaScript package is installed from https://www.npmjs.com/package/pyodide
 - Webpack and html page setup is from https://webpack.js.org/guides/getting-started/, two files are added and tweaked   
     - `src/index.js`: contain the code for
