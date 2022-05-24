@@ -4,17 +4,20 @@
   "description": "",
   "private": true,
   "scripts": {
+    "preinstall": "./scripts/install_pyodide",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "dotenv-webpack": "^7.1.0",
     "webpack": "^5.60.0",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "pyodide": "^0.18.2"
+    "pyodide": "file:public/pyodide"
   }
 }

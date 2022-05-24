@@ -1,0 +1,8 @@
+.env
+!.env.public
+
+node_modules
+dist/
+
+public/pyodide
+*.tar.bz2
