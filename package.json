@@ -4,14 +4,20 @@
   "description": "",
   "private": true,
   "scripts": {
-    "preinstall": "./scripts/install_pyodide",
-    "dev": "webpack serve --mode development --live-reload --open",
-    "build": "webpack build --mode production",
-    "serve": "webpack serve --mode production --open",
+    "download-pyodide": "./scripts/install_pyodide",
+    "dev": "npm run build && webpack serve --mode development --live-reload --open",
+    "build": "rm -rf ./public/dist && webpack build --mode production",
+    "serve": "npm run build && webpack serve --mode production --open",
     "preview": "xdg-open ./public/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["pyodide", "webpack", "demo", "python", "wasm"],
+  "keywords": [
+    "pyodide",
+    "webpack",
+    "demo",
+    "python",
+    "wasm"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {

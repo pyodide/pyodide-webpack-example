@@ -7,7 +7,7 @@ async function loadPyodide() {
   pyodide.runPython(`
       import js
 
-      main_div = js.document.getElementById("main")
+      main_div = js.document.getElementById("status")
       if main_div:
         main_div.innerHTML = "Loaded!"
 
