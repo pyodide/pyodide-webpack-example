@@ -5,9 +5,13 @@
   "private": true,
   "scripts": {
     "preinstall": "./scripts/install_pyodide",
+    "dev": "webpack serve --mode development --live-reload --open",
+    "build": "webpack build --mode production",
+    "serve": "webpack serve --mode production --open",
+    "preview": "xdg-open ./public/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["pyodide", "webpack", "demo", "python", "wasm"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
