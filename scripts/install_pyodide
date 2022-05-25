@@ -2,7 +2,7 @@
 
 source .env.public
 TAR_BZ2_NAME=./pyodide.tar.bz2
-DST_DIR=./public
+DST_DIR=./scratch
 
 if [ -f "${TAR_BZ2_NAME}" ];
 then

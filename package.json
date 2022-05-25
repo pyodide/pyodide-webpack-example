@@ -1,7 +1,7 @@
 {
   "name": "webpack-pyodide-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minimal working example of Pyodide and Webpack.",
   "private": true,
   "scripts": {
     "download-pyodide": "./scripts/install_pyodide",
@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "pyodide": "file:public/pyodide"
+    "pyodide": "file:scratch/pyodide"
   }
 }
