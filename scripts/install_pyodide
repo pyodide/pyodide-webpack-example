@@ -1,8 +1,11 @@
 #! /bin/bash
 
 source .env.public
+DST_DIR=./.pyodide
 TAR_BZ2_NAME=./pyodide.tar.bz2
-DST_DIR=./scratch
+
+mkdir $DST_DIR -p
+cd $DST_DIR
 
 if [ -f "${TAR_BZ2_NAME}" ];
 then
@@ -13,10 +16,7 @@ else
     echo "[preinstall] Downloading pyodide from github build..."
 fi
 
-
-mkdir scratch -p
-rm -rf $TAR_BZ2_NAME ${DST_DIR}/pyodide
+rm -rf pyodide
 
 curl -LJ -o ${TAR_BZ2_NAME} ${DOWNLOAD_URL}
-tar -xf ./pyodide.tar.bz2
-mv pyodide ${DST_DIR}
+tar -xf $TAR_BZ2_NAME

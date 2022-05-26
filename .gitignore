@@ -2,7 +2,5 @@
 !.env.public
 
 node_modules
-scratch
-#dist/
-#public/pyodide
-*.tar.bz2
+
+.pyodide

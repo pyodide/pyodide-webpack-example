@@ -6,7 +6,7 @@
   "scripts": {
     "download-pyodide": "./scripts/install_pyodide",
     "dev": "npm run build && webpack serve --mode development --live-reload --open",
-    "build": "rm -rf ./public/dist && webpack build --mode production",
+    "build": "rm -rf ./public/bundle && webpack build --mode production",
     "serve": "npm run build && webpack serve --mode production --open",
     "preview": "xdg-open ./public/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "pyodide": "file:scratch/pyodide"
+    "pyodide": "file:.pyodide/pyodide"
   }
 }
