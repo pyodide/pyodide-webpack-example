@@ -1,0 +1,22 @@
+#! /bin/bash
+
+source .env.public
+DST_DIR=./.pyodide
+TAR_BZ2_NAME=./pyodide.tar.bz2
+
+mkdir $DST_DIR -p
+cd $DST_DIR
+
+if [ -f "${TAR_BZ2_NAME}" ];
+then
+    echo "[preinstall] pyodide.tar.bz2 already downloaded."
+    exit
+else
+    # if file exist the it will be printed
+    echo "[preinstall] Downloading pyodide from github build..."
+fi
+
+rm -rf pyodide
+
+curl -LJ -o ${TAR_BZ2_NAME} ${DOWNLOAD_URL}
+tar -xf $TAR_BZ2_NAME

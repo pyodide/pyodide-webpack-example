@@ -1,0 +1,6 @@
+.env
+!.env.public
+
+node_modules
+
+.pyodide

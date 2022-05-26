@@ -1,20 +1,33 @@
 {
   "name": "webpack-pyodide-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minimal working example of Pyodide and Webpack.",
   "private": true,
   "scripts": {
+    "download-pyodide": "./scripts/install_pyodide",
+    "dev": "npm run build && webpack serve --mode development --live-reload --open",
+    "build": "rm -rf ./public/bundle && webpack build --mode production",
+    "serve": "npm run build && webpack serve --mode production --open",
+    "preview": "xdg-open ./public/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "pyodide",
+    "webpack",
+    "demo",
+    "python",
+    "wasm"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "dotenv-webpack": "^7.1.0",
     "webpack": "^5.60.0",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "pyodide": "^0.18.2"
+    "pyodide": "file:.pyodide/pyodide"
   }
 }
