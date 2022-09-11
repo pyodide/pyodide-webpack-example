@@ -12,4 +12,4 @@ async function loadPyodide() {
   `);
 }
 
-loadPyodide()
+loadPyodide();
