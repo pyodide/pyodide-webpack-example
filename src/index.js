@@ -1,9 +1,6 @@
 async function loadPyodide() {
   const pyodide_pkg = await import("pyodide/pyodide.js");
-  const pyodide = await pyodide_pkg.loadPyodide({
-    indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.1/full/",
-  });
-
+  const pyodide = await pyodide_pkg.loadPyodide();
   pyodide.runPython(`
       import js
       div = js.document.createElement("div")
