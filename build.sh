@@ -16,3 +16,4 @@ npx webpack --mode production | tee build.log
 
 # Exit with error if there were any warnings
 (grep WARNING build.log > /dev/null) && exit 1
+exit 0
