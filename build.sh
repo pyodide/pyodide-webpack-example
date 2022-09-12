@@ -5,7 +5,7 @@ set -o pipefail
 npm ci
 
 # Link in development build of Pyodide
-if [ -z ${DEV_PYODIDE_PATH+x} ];
+if [ ${DEV_PYODIDE_PATH+x} ];
 then 
     rm -rf node_modules/pyodide
     ln -s "$DEV_PYODIDE_PATH" node_modules/pyodide
